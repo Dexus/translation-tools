@@ -1,0 +1,9 @@
+{
+  "extends": ["config:base"],
+  "automerge": true,
+  "baseBranches": ["master"],
+  "major": {
+    "automerge": false
+  },
+  "schedule": "every weekend"
+}

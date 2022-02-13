@@ -1,0 +1,65 @@
+{
+  "name": "translation-tools",
+  "version": "1.0.0",
+  "description": "Tools to translate json and md files via diverse translation apis like deepl, google, azure, etc.",
+  "main": "index.js",
+  "preferGlobal": true,
+  "author": "Josef Fröhle <github@josef-froehle.de>",
+  "license": "MIT",
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dexus/translation-tools.git"
+  },
+  "funding": "https://github.josef-froehle.de/donate",
+  "homepage": "https://github.com/Dexus/translation-tools#readme",
+  "bugs": {
+    "url": "https://github.com/Dexus/translation-tools/issues"
+  },
+  "private": false,
+  "dependencies": {
+    "commander": "^7.2.0",
+    "lodash.chunk": "^4.2.0",
+    "lodash.flatten": "^4.4.0",
+    "lodash.merge": "^4.6.1",
+    "remark": "^13.0.0",
+    "request": "^2.88.0",
+    "unified-stream": "^2.0.0",
+    "uuid": "^8.3.2",
+    "@hobbica98/google-translate-api": "^1.1.1",
+    "colors": "^1.1.2",
+    "html-entities": "^1.2.0",
+    "lodash": "^4.17.21",
+    "minimist": "^1.2.0",
+    "mstranslator": "^3.0.0",
+    "yandex.translate": "^1.0.0"
+  },
+  "devDependencies": {
+    "husky": "7.0.4",
+    "jest": "27.5.1",
+    "lint-staged": "11.2.6",
+    "pkg": "5.5.2",
+    "prettier": "2.5.1",
+    "eslint": "^7.4.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": "prettier --write"
+  },
+  "scripts": {
+    "test": "jest",
+    "dist:mac": "pkg package.json --targets node8-macos-x64",
+    "dist:win": "pkg package.json --targets node8-win-x64"
+  },
+  "bin": {
+    "md-translator": "./md-translator/cli.js",
+    "json-translator": "./json-translator/cli.js"
+  },
+  "pkg": {
+    "assets": "config.json"
+  }
+}
