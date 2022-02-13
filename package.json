@@ -37,7 +37,7 @@
   "devDependencies": {
     "husky": "7.0.4",
     "jest": "27.5.1",
-    "lint-staged": "11.2.6",
+    "lint-staged": "12.3.3",
     "pkg": "5.5.2",
     "prettier": "2.5.1",
     "eslint": "8.9.0"
