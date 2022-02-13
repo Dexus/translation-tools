@@ -1,7 +1,12 @@
 {
-  "extends": ["config:base"],
+  "extends": [
+    "config:base",
+    ":dependencyDashboard"
+  ],
   "automerge": true,
-  "baseBranches": ["master"],
+  "baseBranches": [
+    "master"
+  ],
   "major": {
     "automerge": false
   },
