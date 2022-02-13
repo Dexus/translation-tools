@@ -1,0 +1,41 @@
+{
+  "usage": [
+    "Usage:",
+    "translate-json [options] -from <language> -to <language> (- | <input>) [<output>]",
+    "translate-json [options] --from=<language> --to=<language> (- | <input>) [<output>]",
+    "",
+    "Options:",
+    "-t, --translator              The translation service to use: google (default), yandex, bing.",
+    "-k, --api-key                 The API key to be used with the translation service.",
+    "-p, --preserve-html-entities  Preserve HTML entities in translated text. (False by default.)",
+    "-e, --exclude                 Regular expression to exclude key paths. e.g. '^(notThis|this|not.this.either)$'",
+    "-d, --dry-run                 Do not actually translate any values, prefix strings with 'zz_' to mark them.",
+    "-h, --help                    Show this screen.",
+    "-v, --version                 Show version.",
+    "-ff, --file-format            File formats supported JSON (default), js with export default (only one export per file) for i18n.",
+    "--verbose                     Log more.",
+    "",
+    "Examples:",
+    "translate-json --from=en --to=ru ./labels.json ./labels-ru.json",
+    "translate-json -d --from=en --to=ru ./labels.json ./labels-ru.json",
+    "translate-json --preserve-html-entities --from=en --to=ru ./labels.json ./labels-ru.json",
+    "cat input.json | translate-json --from en -to ru - > output.json"
+  ],
+  "errors": {
+    "REQUIRED_PARAM_TO": "Failed to specify a language to translate to. (--to)",
+    "REQUIRED_PARAM_FROM": "Failed to specify a language to translate from. (--from)",
+    "REQUIRED_PARAM_INPUT": "Failed to specify an input file.",
+    "REQUIRED_PARAM_API_KEY": "You specified %s as a translator, but did not specify an API key. (Use -k)",
+    "INVALID_TRANSLATOR": "The translation API you specified is not valid. Please use google (default), yandex, or bing.",
+    "INVALID_STD_INPUT": "Could not read stdin.",
+    "INVALID_INPUT": "%s is not a file",
+    "INVALID_INPUT_FORMAT": "%s is not a supported file format",
+    "INVALID_JSON_DOC": "%s is not a JSON document"
+  },
+  "messages": {
+    "SUCCESS": "Successfully wrote translated file to %s.",
+    "TRANSLATING": "Fetching translations for %s fields.",
+    "DUPLICATE_COUNT": "Optimising... found %d duplicate values to translate.",
+    "TRANSFORMER_CHOICE": "Using '%s' transformer."
+  }
+}

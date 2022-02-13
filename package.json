@@ -32,17 +32,12 @@
     "yandex.translate": "^1.0.0"
   },
   "devDependencies": {
-    "husky": "7.0.4",
+    "husky": "^7.0.0",
     "jest": "27.5.1",
     "lint-staged": "12.3.3",
     "pkg": "5.5.2",
     "prettier": "2.5.1",
     "eslint": "8.9.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": "prettier --write"
@@ -50,7 +45,8 @@
   "scripts": {
     "test": "jest",
     "dist:mac": "pkg package.json --targets node8-macos-x64",
-    "dist:win": "pkg package.json --targets node8-win-x64"
+    "dist:win": "pkg package.json --targets node8-win-x64",
+    "prepare": "husky install"
   },
   "bin": {
     "md-translator": "./md-translator/cli.js",
