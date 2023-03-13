@@ -18,7 +18,7 @@
   },
   "private": false,
   "dependencies": {
-    "commander": "^9.0.0",
+    "commander": "^10.0.0",
     "remark": "^14.0.0",
     "request": "^2.88.0",
     "unified-stream": "^2.0.0",
